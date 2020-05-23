@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,10 +17,12 @@ public class Matricula {
 	@Column(name = "mat_id")
 	private Long id; 
 	
-	@Column(name = "mat_alumne")
+	@OneToOne
+	@JoinColumn(name = "mat_alumne")
 	private Alumne alumne;
 	
-	@Column(name = "mat_curs")
+	@OneToOne
+	@JoinColumn(name = "mat_curs")
 	private Curs curs;
 	
 	public Long getId() {
