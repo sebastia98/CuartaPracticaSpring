@@ -1,12 +1,24 @@
 package org.formacio.setmana2.domini;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "t_matricules")
 public class Matricula {
-
+	
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "mat_id")
 	private Long id; 
 	
+	@Column(name = "mat_alumne")
 	private Alumne alumne;
 	
+	@Column(name = "mat_curs")
 	private Curs curs;
 	
 	public Long getId() {

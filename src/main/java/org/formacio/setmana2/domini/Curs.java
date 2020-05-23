@@ -2,14 +2,12 @@ package org.formacio.setmana2.domini;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "t_cursos")
 public class Curs {
 	
-	@Id
 	@Column(name = "cur_nom")
 	private String nom;
     
