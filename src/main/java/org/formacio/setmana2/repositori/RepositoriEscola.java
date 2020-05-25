@@ -27,7 +27,7 @@ public class RepositoriEscola {
 		
 		Matricula matricula = new Matricula();
 		Alumne nin = em.find(Alumne.class, alumne);
-		Curs promo = em.find(Curs.class, curs);
+		Curs promo = carregaCurs(curs);
 		
 		if (nin.getEdat() < promo.getEdatMinima()) {
 			throw new EdatIncorrecteException();
